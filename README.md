@@ -1,8 +1,6 @@
 # Computer Vision GTSRB
 
-This project detects and classifies German traffic signs using a YOLO model trained from the GTSRB dataset prepared in this workspace. The repository contains the raw GTSRB metadata, converted YOLO-format labels, a training configuration file, a trained model checkpoint, and a Flask web interface for testing predictions on uploaded images.
-
-No images are embedded in this README. The explanation below is text-only and is based on the files available in the project root.
+This project detects and classifies German traffic signs using a YOLO model trained from the GTSRB dataset prepared in this workspace. The repository contains the raw GTSRB metadata, converted YOLO-format labels, class reference images from `Meta/`, a training configuration file, a trained model checkpoint, and a Flask web interface for testing predictions on uploaded images.
 
 ## What GTSRB Is
 
@@ -21,6 +19,7 @@ The main local files and folders used by this project are:
 | `Train.csv` | GTSRB training metadata, image paths, class IDs, image dimensions, and ROI boxes. |
 | `Test.csv` | GTSRB test metadata with the same structure as the training CSV. |
 | `Meta.csv` | Metadata for each class, including class ID and sign metadata. |
+| `GTSRB/Meta/` | Reference sign image for each class ID, used in the class table below. |
 | `Train/` | Original GTSRB training images grouped by class folder. |
 | `Test/` | Original GTSRB test images. |
 | `Meta/` | Class reference sign files. |
@@ -193,55 +192,55 @@ The config tells YOLO:
 
 Note: the `path` value currently points to a Google Drive style path. If training locally from this repository, that path may need to be changed to the local project path or to `.` depending on the training command.
 
-## Class List
+## Class List With Meta Images
 
-The project uses the following 43 class IDs from `traffic_signs_gtsrb.yaml`:
+The project uses the following 43 class IDs from `traffic_signs_gtsrb.yaml`. The sign thumbnails are loaded from `GTSRB/Meta/`, using one reference image per class.
 
-| ID | Class name | Training rows |
-| ---: | --- | ---: |
-| 0 | `speed_limit_20` | 210 |
-| 1 | `speed_limit_30` | 2,220 |
-| 2 | `speed_limit_50` | 2,250 |
-| 3 | `speed_limit_60` | 1,410 |
-| 4 | `speed_limit_70` | 1,980 |
-| 5 | `speed_limit_80` | 1,860 |
-| 6 | `speed_limit_80_end` | 420 |
-| 7 | `speed_limit_100` | 1,440 |
-| 8 | `speed_limit_120` | 1,410 |
-| 9 | `no_overtaking` | 1,470 |
-| 10 | `no_overtaking_trucks` | 2,010 |
-| 11 | `priority_next_intersection` | 1,320 |
-| 12 | `priority_road` | 2,100 |
-| 13 | `give_way` | 2,160 |
-| 14 | `stop` | 780 |
-| 15 | `no_traffic_both` | 630 |
-| 16 | `no_trucks` | 420 |
-| 17 | `no_entry` | 1,110 |
-| 18 | `danger` | 1,200 |
-| 19 | `bend_left` | 210 |
-| 20 | `bend_right` | 360 |
-| 21 | `bend_double` | 330 |
-| 22 | `road_works` | 390 |
-| 23 | `road_narrows` | 510 |
-| 24 | `slippery_road` | 270 |
-| 25 | `road_uneven` | 1,500 |
-| 26 | `debris` | 600 |
-| 27 | `children` | 240 |
-| 28 | `bike_crossing` | 540 |
-| 29 | `snow` | 270 |
-| 30 | `animals` | 450 |
-| 31 | `restriction_ends` | 780 |
-| 32 | `go_right` | 240 |
-| 33 | `go_left` | 689 |
-| 34 | `go_straight` | 420 |
-| 35 | `go_right_or_straight` | 1,200 |
-| 36 | `go_left_or_straight` | 390 |
-| 37 | `keep_right` | 210 |
-| 38 | `keep_left` | 2,070 |
-| 39 | `roundabout` | 300 |
-| 40 | `restriction_ends_overtaking` | 360 |
-| 41 | `restriction_ends_overtaking_trucks` | 240 |
-| 42 | `unknown` | 240 |
+| Sign | ID | Class name | Training rows |
+| --- | ---: | --- | ---: |
+| ![speed_limit_20](Meta/0.png) | 0 | `speed_limit_20` | 210 |
+| ![speed_limit_30](Meta/1.png) | 1 | `speed_limit_30` | 2,220 |
+| ![speed_limit_50](Meta/2.png) | 2 | `speed_limit_50` | 2,250 |
+| ![speed_limit_60](Meta/3.png) | 3 | `speed_limit_60` | 1,410 |
+| ![speed_limit_70](Meta/4.png) | 4 | `speed_limit_70` | 1,980 |
+| ![speed_limit_80](Meta/5.png) | 5 | `speed_limit_80` | 1,860 |
+| ![speed_limit_80_end](Meta/6.png) | 6 | `speed_limit_80_end` | 420 |
+| ![speed_limit_100](Meta/7.png) | 7 | `speed_limit_100` | 1,440 |
+| ![speed_limit_120](Meta/8.png) | 8 | `speed_limit_120` | 1,410 |
+| ![no_overtaking](Meta/9.png) | 9 | `no_overtaking` | 1,470 |
+| ![no_overtaking_trucks](Meta/10.png) | 10 | `no_overtaking_trucks` | 2,010 |
+| ![priority_next_intersection](Meta/11.png) | 11 | `priority_next_intersection` | 1,320 |
+| ![priority_road](Meta/12.png) | 12 | `priority_road` | 2,100 |
+| ![give_way](Meta/13.png) | 13 | `give_way` | 2,160 |
+| ![stop](Meta/14.png) | 14 | `stop` | 780 |
+| ![no_traffic_both](Meta/15.png) | 15 | `no_traffic_both` | 630 |
+| ![no_trucks](Meta/16.png) | 16 | `no_trucks` | 420 |
+| ![no_entry](Meta/17.png) | 17 | `no_entry` | 1,110 |
+| ![danger](Meta/18.png) | 18 | `danger` | 1,200 |
+| ![bend_left](Meta/19.png) | 19 | `bend_left` | 210 |
+| ![bend_right](Meta/20.png) | 20 | `bend_right` | 360 |
+| ![bend_double](Meta/21.png) | 21 | `bend_double` | 330 |
+| ![road_works](Meta/22.png) | 22 | `road_works` | 390 |
+| ![road_narrows](Meta/23.png) | 23 | `road_narrows` | 510 |
+| ![slippery_road](Meta/24.png) | 24 | `slippery_road` | 270 |
+| ![road_uneven](Meta/25.png) | 25 | `road_uneven` | 1,500 |
+| ![debris](Meta/26.png) | 26 | `debris` | 600 |
+| ![children](Meta/27.png) | 27 | `children` | 240 |
+| ![bike_crossing](Meta/28.png) | 28 | `bike_crossing` | 540 |
+| ![snow](Meta/29.png) | 29 | `snow` | 270 |
+| ![animals](Meta/30.png) | 30 | `animals` | 450 |
+| ![restriction_ends](Meta/31.png) | 31 | `restriction_ends` | 780 |
+| ![go_right](Meta/32.png) | 32 | `go_right` | 240 |
+| ![go_left](Meta/33.png) | 33 | `go_left` | 689 |
+| ![go_straight](Meta/34.png) | 34 | `go_straight` | 420 |
+| ![go_right_or_straight](Meta/35.png) | 35 | `go_right_or_straight` | 1,200 |
+| ![go_left_or_straight](Meta/36.png) | 36 | `go_left_or_straight` | 390 |
+| ![keep_right](Meta/37.png) | 37 | `keep_right` | 210 |
+| ![keep_left](Meta/38.png) | 38 | `keep_left` | 2,070 |
+| ![roundabout](Meta/39.png) | 39 | `roundabout` | 300 |
+| ![restriction_ends_overtaking](Meta/40.png) | 40 | `restriction_ends_overtaking` | 360 |
+| ![restriction_ends_overtaking_trucks](Meta/41.png) | 41 | `restriction_ends_overtaking_trucks` | 240 |
+| ![unknown](Meta/42.png) | 42 | `unknown` | 240 |
 
 The class distribution is imbalanced. Some classes have more than 2,000 training samples, while others have only around 210 to 300. This matters during training because the model can learn frequent classes more easily than rare ones.
 
