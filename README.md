@@ -194,7 +194,7 @@ Note: the `path` value currently points to a Google Drive style path. If trainin
 
 ## Class List With Meta Images
 
-The project uses the following 43 class IDs from `traffic_signs_gtsrb.yaml`. The sign thumbnails are loaded from `GTSRB/Meta/`, using one reference image per class.
+The project uses the following 43 GTSRB class IDs. The sign thumbnails are loaded from `GTSRB/Meta/`, using one reference image per class. These names are written to match the actual visual meaning of each `Meta/<class_id>.png` image.
 
 | Sign | ID | Class name | Training rows |
 | --- | ---: | --- | ---: |
@@ -207,40 +207,40 @@ The project uses the following 43 class IDs from `traffic_signs_gtsrb.yaml`. The
 | ![speed_limit_80_end](Meta/6.png) | 6 | `speed_limit_80_end` | 420 |
 | ![speed_limit_100](Meta/7.png) | 7 | `speed_limit_100` | 1,440 |
 | ![speed_limit_120](Meta/8.png) | 8 | `speed_limit_120` | 1,410 |
-| ![no_overtaking](Meta/9.png) | 9 | `no_overtaking` | 1,470 |
-| ![no_overtaking_trucks](Meta/10.png) | 10 | `no_overtaking_trucks` | 2,010 |
-| ![priority_next_intersection](Meta/11.png) | 11 | `priority_next_intersection` | 1,320 |
+| ![no_passing](Meta/9.png) | 9 | `no_passing` | 1,470 |
+| ![no_passing_trucks](Meta/10.png) | 10 | `no_passing_trucks` | 2,010 |
+| ![right_of_way_next_intersection](Meta/11.png) | 11 | `right_of_way_next_intersection` | 1,320 |
 | ![priority_road](Meta/12.png) | 12 | `priority_road` | 2,100 |
-| ![give_way](Meta/13.png) | 13 | `give_way` | 2,160 |
+| ![yield](Meta/13.png) | 13 | `yield` | 2,160 |
 | ![stop](Meta/14.png) | 14 | `stop` | 780 |
-| ![no_traffic_both](Meta/15.png) | 15 | `no_traffic_both` | 630 |
+| ![no_vehicles](Meta/15.png) | 15 | `no_vehicles` | 630 |
 | ![no_trucks](Meta/16.png) | 16 | `no_trucks` | 420 |
 | ![no_entry](Meta/17.png) | 17 | `no_entry` | 1,110 |
-| ![danger](Meta/18.png) | 18 | `danger` | 1,200 |
-| ![bend_left](Meta/19.png) | 19 | `bend_left` | 210 |
-| ![bend_right](Meta/20.png) | 20 | `bend_right` | 360 |
-| ![bend_double](Meta/21.png) | 21 | `bend_double` | 330 |
-| ![road_works](Meta/22.png) | 22 | `road_works` | 390 |
-| ![road_narrows](Meta/23.png) | 23 | `road_narrows` | 510 |
-| ![slippery_road](Meta/24.png) | 24 | `slippery_road` | 270 |
-| ![road_uneven](Meta/25.png) | 25 | `road_uneven` | 1,500 |
-| ![debris](Meta/26.png) | 26 | `debris` | 600 |
-| ![children](Meta/27.png) | 27 | `children` | 240 |
-| ![bike_crossing](Meta/28.png) | 28 | `bike_crossing` | 540 |
-| ![snow](Meta/29.png) | 29 | `snow` | 270 |
-| ![animals](Meta/30.png) | 30 | `animals` | 450 |
-| ![restriction_ends](Meta/31.png) | 31 | `restriction_ends` | 780 |
-| ![go_right](Meta/32.png) | 32 | `go_right` | 240 |
-| ![go_left](Meta/33.png) | 33 | `go_left` | 689 |
-| ![go_straight](Meta/34.png) | 34 | `go_straight` | 420 |
-| ![go_right_or_straight](Meta/35.png) | 35 | `go_right_or_straight` | 1,200 |
-| ![go_left_or_straight](Meta/36.png) | 36 | `go_left_or_straight` | 390 |
-| ![keep_right](Meta/37.png) | 37 | `keep_right` | 210 |
-| ![keep_left](Meta/38.png) | 38 | `keep_left` | 2,070 |
-| ![roundabout](Meta/39.png) | 39 | `roundabout` | 300 |
-| ![restriction_ends_overtaking](Meta/40.png) | 40 | `restriction_ends_overtaking` | 360 |
-| ![restriction_ends_overtaking_trucks](Meta/41.png) | 41 | `restriction_ends_overtaking_trucks` | 240 |
-| ![unknown](Meta/42.png) | 42 | `unknown` | 240 |
+| ![general_caution](Meta/18.png) | 18 | `general_caution` | 1,200 |
+| ![dangerous_curve_left](Meta/19.png) | 19 | `dangerous_curve_left` | 210 |
+| ![dangerous_curve_right](Meta/20.png) | 20 | `dangerous_curve_right` | 360 |
+| ![double_curve](Meta/21.png) | 21 | `double_curve` | 330 |
+| ![bumpy_road](Meta/22.png) | 22 | `bumpy_road` | 390 |
+| ![slippery_road](Meta/23.png) | 23 | `slippery_road` | 510 |
+| ![road_narrows_right](Meta/24.png) | 24 | `road_narrows_right` | 270 |
+| ![road_work](Meta/25.png) | 25 | `road_work` | 1,500 |
+| ![traffic_signals](Meta/26.png) | 26 | `traffic_signals` | 600 |
+| ![pedestrians](Meta/27.png) | 27 | `pedestrians` | 240 |
+| ![children_crossing](Meta/28.png) | 28 | `children_crossing` | 540 |
+| ![bicycles_crossing](Meta/29.png) | 29 | `bicycles_crossing` | 270 |
+| ![beware_ice_snow](Meta/30.png) | 30 | `beware_ice_snow` | 450 |
+| ![wild_animals_crossing](Meta/31.png) | 31 | `wild_animals_crossing` | 780 |
+| ![end_speed_and_passing_limits](Meta/32.png) | 32 | `end_speed_and_passing_limits` | 240 |
+| ![turn_right_ahead](Meta/33.png) | 33 | `turn_right_ahead` | 689 |
+| ![turn_left_ahead](Meta/34.png) | 34 | `turn_left_ahead` | 420 |
+| ![ahead_only](Meta/35.png) | 35 | `ahead_only` | 1,200 |
+| ![go_straight_or_right](Meta/36.png) | 36 | `go_straight_or_right` | 390 |
+| ![go_straight_or_left](Meta/37.png) | 37 | `go_straight_or_left` | 210 |
+| ![keep_right](Meta/38.png) | 38 | `keep_right` | 2,070 |
+| ![keep_left](Meta/39.png) | 39 | `keep_left` | 300 |
+| ![roundabout_mandatory](Meta/40.png) | 40 | `roundabout_mandatory` | 360 |
+| ![end_no_overtaking](Meta/41.png) | 41 | `end_no_overtaking` | 240 |
+| ![end_no_overtaking_trucks](Meta/42.png) | 42 | `end_no_overtaking_trucks` | 240 |
 
 The class distribution is imbalanced. Some classes have more than 2,000 training samples, while others have only around 210 to 300. This matters during training because the model can learn frequent classes more easily than rare ones.
 
@@ -355,7 +355,7 @@ If the web app cannot find the model, make sure the command is run from the `GTS
 
 If YOLO training cannot find the dataset, check `traffic_signs_gtsrb.yaml`. The `path` value may need to match the local environment instead of the current Google Drive path.
 
-If a class seems to perform poorly, check the class distribution. Classes with fewer samples, such as `speed_limit_20`, `bend_left`, and `keep_right`, may need augmentation or additional data.
+If a class seems to perform poorly, check the class distribution. Classes with fewer samples, such as `speed_limit_20`, `dangerous_curve_left`, and `go_straight_or_left`, may need augmentation or additional data.
 
 If predictions work on cropped signs but not on full road images, that is expected. GTSRB is mainly composed of cropped sign images, so a model trained only on this data may not generalize perfectly to distant signs in full driving scenes.
 
